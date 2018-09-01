@@ -4,7 +4,7 @@ import 'preact-material-components/Card/style.css';
 import style from './style';
 
 export default class NotFound extends Component {
-	render() {
+	render () {
 		return (
 			<div class={style.home}>
 				<Card>

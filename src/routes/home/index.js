@@ -1,27 +1,50 @@
-import { h, Component } from 'preact';
-import Card from 'preact-material-components/Card';
-import 'preact-material-components/Card/style.css';
-import 'preact-material-components/Button/style.css';
-import style from './style';
+import { h, Component } from 'preact'
+
+import { FaChevronDown } from 'react-icons/fa'
+
+import Header from '../../components/header/index'
+
+import svgBanner from '../../assets/branding/banner.svg'
+
+const SectionHero = () => {
+  return (
+    <div class='home__hero fb-center'>
+      <img src={svgBanner} width='800' />
+      <FaChevronDown class='home__hero__indicator' size='30px' />
+    </div>
+  )
+}
+
+const SectionAbout = () => {
+  return (
+    <div class='home__about fb-center'>
+      <div class='home__about__container fb-crow'>
+        <div class='home__about__container--left'>
+          <h3>ABOUT THE TEAM</h3>
+          <h1>Who Are We?</h1>
+
+          <div />
+
+          <p>Lorem...</p>
+
+        </div>
+
+        <div class='home__about__container--right'>
+          <img class='home__about__container--right__bg' src='../../assets/images/group-picture.jpg' />
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default class Home extends Component {
-	render() {
-		return (
-			<div class={style.home}>
-				<h1>Home route</h1>
-				<Card>
-					<div class={style.cardHeader}>
-						<h2 class=" mdc-typography--title">Home card</h2>
-						<div class=" mdc-typography--caption">Welcome to home route</div>
-					</div>
-					<div class={style.cardBody}>
-						Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-					</div>
-					<Card.Actions>
-						<Card.ActionButton>OKAY</Card.ActionButton>
-					</Card.Actions>
-				</Card>
-			</div>
-		);
-	}
+  render () {
+    return (
+      <div class='home fb-ccolumn'>
+        <Header />
+        <SectionHero />
+        <SectionAbout />
+      </div>
+    )
+  }
 }
