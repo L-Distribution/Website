@@ -1,5 +1,4 @@
 $border-color: #DFC17A;
-$border-inactive-color: #373d41;
 
 @keyframes animate {
   to {
@@ -7,24 +6,36 @@ $border-inactive-color: #373d41;
   }
 }
 
+@keyframes animateLabels {
+  to {
+    margin-left: 40px;
+    opacity: 1;
+  }
+}
+
+@keyframes animateContainer {
+  to {
+    transform: none;
+  }
+}
+
 .container {
   position: relative;
-  width: 200px;
+  width: 350px;
   height: 250px;
 
   .imgContainer {
     position: absolute;
     left: 0;
 
-    .img {
-      width: 96px;
-      height: 96px;
-      border-radius: 50%;
-      border: 2px solid $border-inactive-color;
+    transform: scale(0) rotate(-90deg);
+    animation: animateContainer 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
 
-      &--active {
-        border: 2px solid $border-color;
-      }
+    .img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      border: 2px solid $border-color;
     }
 
     .imgBanner {
@@ -35,9 +46,14 @@ $border-inactive-color: #373d41;
 
   .labels {
     position: absolute;
-    left: 114px;
+    left: 104px;
 
     font-family: Montserrat, sans-serif;
+
+    opacity: 0;
+
+    animation: animateLabels 0.8s ease forwards;
+    animation-delay: 500ms;
 
     & > * {
       margin: 0;
@@ -57,11 +73,6 @@ $border-inactive-color: #373d41;
 
       font-size: 14px;
       font-weight: 200;
-    }
-
-    &--active {
-      margin-left: 60px;
-      text-align: center;
     }
   }
 }

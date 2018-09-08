@@ -7,6 +7,7 @@ import Footer from '../../components/footer/index'
 import AnimatedLogo from '../../components/animatedLogo/index'
 import Member from '../../components/member/index'
 
+
 const SectionHero = () => {
   return (
     <div class='home__hero fb-center'>
@@ -55,7 +56,17 @@ const SectionMembers = () => {
         <h1 class='text text--title'>MEMBERS</h1>
         <div class='separator--large' />
 
-        <Member imgName='cf12.png' name='CF12' label='Testing!' />
+        <div class='home__members__members'>
+          <div class='fb-crow'>
+            <Member imgName='cf12.png' name='CF12' label='Testing!' />
+            <Member imgName='cf12.png' name='CF12' label='Testing!' />
+          </div>
+
+          <div class='fb-crow'>
+            <Member imgName='cf12.png' name='CF12' label='Testing!' />
+            <Member imgName='cf12.png' name='CF12' label='Testing!' />
+          </div>
+        </div>
       </div>
     </div>
   )

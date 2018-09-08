@@ -6,8 +6,6 @@ const AnimatedProfileBanner = (props) => {
   return (
     <div class={style.banner + ' ' + props.class}>
       <svg version='1.1' baseProfile='basic' id='Layer_1' x='0px' y='0px' viewBox='0 0 426 198' xmlSpace='preserve'>
-        <line fill='none' stroke='#919395' stroke-width='2' stroke-miterlimit='10' x1='169' y1='63' x2='426' y2='63'/>
-        <line fill='none' stroke='#919395' stroke-width='2' stroke-miterlimit='10' x1='169' y1='135' x2='426' y2='135'/>
         <line fill='none' stroke='#DFC17A' stroke-width='3' stroke-miterlimit='10' x1='1.5' y1='99.5' x2='100' y2='1'/>
         <line fill='none' stroke='#DFC17A' stroke-width='3' stroke-miterlimit='10' x1='98.5' y1='196.5' x2='197' y2='98'/>
         <line fill='none' stroke='#DFC17A' stroke-width='3' stroke-miterlimit='10' x1='1.5' y1='98' x2='100' y2='196.5'/>

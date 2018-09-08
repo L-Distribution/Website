@@ -68,6 +68,11 @@ $color-third: #4D7EAF;
   padding: 40px;
 
   background-color: $color-primary;
+
+  &__members {
+    height: 500px;
+    margin-left: 150px;
+  }
 }
 
 .home__contact {

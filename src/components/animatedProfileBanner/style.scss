@@ -5,11 +5,12 @@
 }
 
 .banner {
-  width: 350px;
+  width: 337px;
 
   & > svg > line {
     stroke-dasharray: 300;
     stroke-dashoffset: 300;
-    animation: animate 0.5s ease-in-out forwards;
+    animation: animate 2s ease forwards;
+    animation-delay: 400ms;
   }
 }

@@ -14,6 +14,7 @@ export default class Header extends Component {
         <span class={style.links}>
           <a>ABOUT</a>
           <a>CONTACT</a>
+          <a>PROJECTS</a>
           <a>BLOG</a>
         </span>
       </div>
