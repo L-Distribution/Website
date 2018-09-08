@@ -1,0 +1,27 @@
+$background-color: #22272A;
+
+.notfound {
+  width: 100%;
+  height: 100vh;
+
+  background-color: $background-color;
+
+  font-family: "Montserrat", sans-serif;
+
+  &__logo {
+    margin-left: 35px;
+    width: 400px;
+  }
+
+  &__title {
+    margin-top: 30px;
+    margin-bottom: 0;
+
+    color: white;
+    font-size: 28px;
+  }
+
+  &__button {
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,15 @@
+@keyframes animate {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.banner {
+  width: 350px;
+
+  & > svg > line {
+    stroke-dasharray: 300;
+    stroke-dashoffset: 300;
+    animation: animate 0.5s ease-in-out forwards;
+  }
+}

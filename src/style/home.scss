@@ -1,5 +1,6 @@
 $color-primary: #22272A;
-$color-secondary: #4160A7;
+$color-secondary: #373D41;
+$color-third: #4D7EAF;
 
 .home {
   width: 100%;
@@ -30,12 +31,17 @@ $color-secondary: #4160A7;
     height: 100%;
 
     &--left {
+      display: flex;
+      justify-content: center;
       width: 60%;
       height: 100%;
-
-      color: white;
+      padding: 80px;
 
       background-color: $color-secondary;
+
+      &__text {
+        max-width: 1000px;
+      }
     }
 
     &--right {
@@ -56,4 +62,18 @@ $color-secondary: #4160A7;
       }
     }
   }
+}
+
+.home__members {
+  padding: 40px;
+
+  background-color: $color-primary;
+}
+
+.home__contact {
+  padding: 40px;
+
+  background-color: $color-third;
+
+
 }

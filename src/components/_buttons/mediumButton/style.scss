@@ -1,0 +1,41 @@
+$color-active: white;
+$color-inactive: #717171;
+
+.container {
+  width: 200px;
+  height: 50px;
+
+  border: 2px solid $color-inactive;
+  border-radius: 50px;
+
+  transition: all 0.2s ease;
+
+  .icon {
+    margin-right: 8px;
+    color: $color-inactive;
+
+    transition: all 0.2s ease;
+  }
+
+  & > p {
+    color: $color-inactive;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+
+    transition: all 0.2s ease;
+  }
+
+  &:hover {
+    border-color: $color-active;
+
+    & > p {
+      color: $color-active;
+      letter-spacing: 0.8px;
+    }
+
+    .icon {
+      color: $color-active;
+    }
+  }
+}
