@@ -3,6 +3,7 @@ import { Router } from 'preact-router';
 
 import Home from './routes/home';
 import NotFound from './routes/404';
+import Editor from './routes/editor';
 // import Home from 'async!../routes/home';
 // import Profile from 'async!../routes/profile';
 
@@ -26,6 +27,7 @@ class App extends Component {
 			<div id="app">
 				<Router onChange={this.handleRoute}>
 					<Home path="/" />
+					<Editor path='/editor' />
 					<NotFound default />
 				</Router>
 			</div>

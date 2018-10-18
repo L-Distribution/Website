@@ -18,7 +18,11 @@ export default class NotFound extends Component {
           activeClassName=''
           style={{ textDecoration: 'none' }} >
 
-          <MediumButton text='BACK TO HOME' href='/' />
+          <MediumButton
+            text='BACK TO HOME'
+            iconName='FaArrowLeft'
+            iconPos='left'
+          />
         </Link>
       </div>
     )

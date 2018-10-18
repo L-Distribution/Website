@@ -1,5 +1,5 @@
 $color-active: white;
-$color-inactive: #717171;
+$color-inactive: #898989;
 
 .container {
   width: 200px;
@@ -10,14 +10,17 @@ $color-inactive: #717171;
 
   transition: all 0.2s ease;
 
+  cursor: pointer;
+
   .icon {
-    margin-right: 8px;
     color: $color-inactive;
 
     transition: all 0.2s ease;
   }
 
   & > p {
+    margin: 0 8px;
+
     color: $color-inactive;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
@@ -31,7 +34,7 @@ $color-inactive: #717171;
 
     & > p {
       color: $color-active;
-      letter-spacing: 0.8px;
+      letter-spacing: 1px;
     }
 
     .icon {

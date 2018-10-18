@@ -2,7 +2,7 @@ import { h, Component } from 'preact'
 
 import style from './style.scss'
 
-import { FaArrowLeft } from 'react-icons/fa'
+import Fa from 'react-icons/fa'
 
 export default class MediumButton extends Component {
   constructor () {
@@ -14,11 +14,31 @@ export default class MediumButton extends Component {
   }
 
   render (props, state) {
-    return (
-      <div class={style.container + ' fb-center'}>
-        <FaArrowLeft class={style.icon} />
-        <p>{props.text}</p>
-      </div>
-    )
+    const Icon = Fa[props.iconName]
+    const iconPos = props.iconPos
+
+    console.log(Icon)
+
+    if (iconPos === 'left') {
+      return (
+        <div class={style.container + ' fb-center'} onClick={props.onClick}>
+          <Icon class={style.icon} />
+          <p>{props.text}</p>
+        </div>
+      )
+    } else if (iconPos === 'right') {
+      return (
+        <div class={style.container + ' fb-center'} onClick={props.onClick}>
+          <p>{props.text}</p>
+          <Icon class={style.icon} />
+        </div>
+      )
+    } else {
+      return (
+        <div class={style.container + ' fb-center'} onClick={props.onClick}>
+          <p>{props.text}</p>
+        </div>
+      )
+    }
   }
 }
