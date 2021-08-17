@@ -1,11 +1,14 @@
 import { h, Component } from 'preact'
-import ReactQuill from 'react-quill'
+import Showdown from 'showdown'
+import ReactMde from 'react-mde'
+
+import 'draft-js/dist/Draft.css'
+
+// import ReactQuill from 'react-quill'
 
 import MediumButton from '../../components/_buttons/mediumButton/index.js'
 
-import 'react-quill/dist/quill.snow.css'
-
-import { FaChevronDown } from 'react-icons/fa'
+// import 'react-quill/dist/quill.snow.css'
 
 import firebase from '../../modules/firebaseFirestore'
 
@@ -21,6 +24,13 @@ export default class Editor extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
     this.handleEdit = this.handleEdit.bind(this)
+
+    this.converter = new Showdown.Converter({
+      tables: true,
+      simplifiedAutoLink: true,
+      strikethrough: true,
+      tasklists: true
+    })
 
     this.state = {
       name: '',
@@ -57,10 +67,18 @@ export default class Editor extends Component {
           <label>Name</label>
           <input name='name' onChange={this.handleChange}></input>
 
-          <ReactQuill
+          {/* <ReactQuill
             className='editor__form__editor'
+            value={state.value}.
+            onChange={this.handleEdit} /> */}
+
+          <ReactMde
+            onChange={this.handleEdit}
             value={state.value}
-            onChange={this.handleEdit} />
+            // generateMarkdownPreview={markdown =>
+            //   Promise.resolve(this.converter.makeHtml(markdown))
+            // }
+          />
 
           <MediumButton
             text='SUBMIT'

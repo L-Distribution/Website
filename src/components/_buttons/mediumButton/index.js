@@ -17,8 +17,6 @@ export default class MediumButton extends Component {
     const Icon = Fa[props.iconName]
     const iconPos = props.iconPos
 
-    console.log(Icon)
-
     if (iconPos === 'left') {
       return (
         <div class={style.container + ' fb-center'} onClick={props.onClick}>
